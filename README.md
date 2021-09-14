@@ -46,7 +46,7 @@ Run the 2048 docker image:
 $ docker run -it --rm alexwhen/docker-2048
 ```
 
-This application exposes 2048 on port 8080. Can you figure out how to expose the port? The [docker documentation](https://docs.docker.com/engine/reference/commandline/cli/) might help.
+This application exposes 2048 on port 80. Can you figure out how to expose the port on port 8080 on your machine? The [docker documentation](https://docs.docker.com/engine/reference/commandline/cli/) might help.
 
 If you have extra time right now, play around with some of the docker run flags. Some fun ones are `-v`, `-d`, `--name`, etc. You can check out the docker documentation for info on how these work. Also, you can google around and see if there are other interesting images. Maybe `python` or `node`?
 
@@ -74,9 +74,9 @@ While Nginx can be used as a standalone webserver, it's usually used as a [rever
 
 For extra credit, implement the following behavior using only the docker CLI and the nginx configuration file:
 
-- If the webserver is accessed on port 8080, serve the website we've given to you here.
-- If the webserver is accessed on port 8081, forward the request to the `2048` container.
+- If the webserver is accessed at any normal path, serve the website we've given to you here.
+- If the webserver is accessed at the path `/2048`, forward the request to the `2048` container.
 
-Concretely, if you go to `localhost:8080` in your browser, you should see the site we gave you. If you go to `localhost:8081`, you should see 2048.
+Concretely, if you go to `localhost:8080` in your browser, you should see the site we gave you. If you go to `localhost:8080/2048`, you should see 2048.
 
 The first group (2 people) to implement this behavior will get 10 points extra credit on the docker homework!
