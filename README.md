@@ -46,7 +46,7 @@ Run the 2048 docker image:
 $ docker run -it --rm alexwhen/docker-2048
 ```
 
-This application exposes 2048 on port 80. Can you figure out how to expose the port on port 8080 on your machine? The [docker documentation](https://docs.docker.com/engine/reference/commandline/cli/) might help.
+This application exposes 2048 on port 80. Can you figure out how to expose the application on port 8080 on your machine? The [docker documentation](https://docs.docker.com/engine/reference/commandline/cli/) might help.
 
 If you have extra time right now, play around with some of the docker run flags. Some fun ones are `-v`, `-d`, `--name`, etc. You can check out the docker documentation for info on how these work. Also, you can google around and see if there are other interesting images. Maybe `python` or `node`?
 
