@@ -13,7 +13,7 @@ Let's learn some docker.
 Pull your image and check out the layers!
 
 ```
-$ docker pull ubuntu:latest
+$ docker pull ubuntu
 latest: Pulling from library/ubuntu
 da7391352a9b: Pull complete 
 14428a6d4bcd: Pull complete 
@@ -22,6 +22,22 @@ Digest: sha256:c95a8e48bf88e9849f3e0f723d9f49fa12c5a00cfc6e60d2bc99d87555295e4c
 Status: Downloaded newer image for ubuntu:latest
 docker.io/library/ubuntu:latest
 ```
+
+Note that since we didn't specify an image tag, docker assumed we wanted the `:latest` image. What happens when we specify a new tag (that points to the same image as `:latest`)?
+
+```
+$ docker pull ubuntu:20.04
+```
+
+This command should succeed immediately because we've already pulled down the `ubuntu:latest` image, which is tagged to the same image as `ubuntu:20.04`. In fact, if we go on to the [Ubuntu Docker Hub](https://hub.docker.com/_/ubuntu) page, we can see that the README lists both `20.04` and `latest` as the same image!
+
+Now what happens when we pull a slightly older image version?
+
+```
+$ docker pull ubuntu:18.04
+```
+
+In this case, we expect to see Docker downloading a new image because we do not have `18.04` already downloaded.
 
 Now run it and play around in the container (ls, cd, cat, etc):
 
