@@ -90,8 +90,7 @@ While Nginx can be used as a standalone webserver, it's usually used as a [rever
 
 For extra credit, implement the following behavior using only the docker CLI and the nginx configuration file:
 
-- If the webserver is accessed at any normal path, serve the website we've given to you here.
-- If the webserver is accessed at the path `/2048`, forward the request to the `2048` container.
+- If the webserver is accessed at `localhost`, serve the website we've given to you here.
+- If the webserver is accessed at `127.0.0.1`, forward the request to the `2048` container.
 
-Concretely, if you go to `localhost:8080` in your browser, you should see the site we gave you. If you go to `localhost:8080/2048`, you should see 2048.
-
+Concretely, if you go to `localhost:8080` in your browser, you should see the site we gave you. If you go to `127.0.0.1:8080`, you should see 2048.
