@@ -95,4 +95,3 @@ For extra credit, implement the following behavior using only the docker CLI and
 
 Concretely, if you go to `localhost:8080` in your browser, you should see the site we gave you. If you go to `localhost:8080/2048`, you should see 2048.
 
-The first group (2 people) to implement this behavior will get 10 points extra credit on the docker homework!
