@@ -26,18 +26,18 @@ docker.io/library/ubuntu:latest
 Note that since we didn't specify an image tag, docker assumed we wanted the `:latest` image. What happens when we specify a new tag (that points to the same image as `:latest`)?
 
 ```
-$ docker pull ubuntu:20.04
+$ docker pull ubuntu:22.04
 ```
 
-This command should succeed immediately because we've already pulled down the `ubuntu:latest` image, which is tagged to the same image as `ubuntu:20.04`. In fact, if we go on to the [Ubuntu Docker Hub](https://hub.docker.com/_/ubuntu) page, we can see that the README lists both `20.04` and `latest` as the same image!
+This command should succeed immediately because we've already pulled down the `ubuntu:latest` image, which is tagged to the same image as `ubuntu:22.04`. In fact, if we go on to the [Ubuntu Docker Hub](https://hub.docker.com/_/ubuntu) page, we can see that the README lists both `22.04` and `latest` as the same image!
 
 Now what happens when we pull a slightly older image version?
 
 ```
-$ docker pull ubuntu:18.04
+$ docker pull ubuntu:20.04
 ```
 
-In this case, we expect to see Docker downloading a new image because we do not have `18.04` already downloaded.
+In this case, we expect to see Docker downloading a new image because we do not have `20.04` already downloaded.
 
 Now run it and play around in the container (ls, cd, cat, etc):
 
